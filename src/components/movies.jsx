@@ -25,7 +25,7 @@ class Movies extends React.Component {
     return (
       <React.Fragment>
         <p>There are {count} movies in the database</p>
-        <table className='table'>
+        <table className='table table-dark table-striped'>
           <thead>
             <tr>
               <td>Title</td>
