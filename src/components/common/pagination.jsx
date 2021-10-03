@@ -1,6 +1,6 @@
 import React from 'react'
 import _ from 'lodash'
-
+import PropTypes from 'prop-types'
 const Paginations = (props) => {
   const { itemsCount, pageSize, currentPage, onPageChange } = props
   console.log(currentPage)
@@ -23,6 +23,13 @@ const Paginations = (props) => {
       </ul>
     </nav>
   )
+}
+
+Paginations.propTypes = {
+  itemsCount: PropTypes.number.isRequired,
+  pageSize: PropTypes.number.isRequired,
+  currentPage: PropTypes.number.isRequired,
+  onPageChange: PropTypes.func.isRequired,
 }
 
 export default Paginations
