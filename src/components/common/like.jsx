@@ -1,17 +1,17 @@
 import React from 'react'
 
-const Like = (props) => {
-  if (props.liked === true)
+const Like = ({ onClick, liked }) => {
+  if (liked === true)
     return (
       <i
         style={{ cursor: 'pointer' }}
-        onClick={props.onClick}
+        onClick={onClick}
         className='fas fa-heart'
       ></i>
     )
   return (
     <i
-      onClick={props.onClick}
+      onClick={onClick}
       style={{ cursor: 'pointer' }}
       className='far fa-heart'
     ></i>
